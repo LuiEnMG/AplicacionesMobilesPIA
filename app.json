@@ -25,6 +25,9 @@
         "projectId": "76121680-9ea0-4bb9-b9df-92995c261538"
       }
     },
-    "owner": "luienmguanl"
+    "owner": "luienmguanl",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
