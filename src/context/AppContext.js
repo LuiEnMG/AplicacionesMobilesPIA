@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import { createContext, useContext, useEffect, useMemo, useReducer, useRef } from 'react';
 import { DEFAULT_CITY_ID, cityById, routeDetails, shortestPath } from '../data/cities';
 
@@ -60,7 +60,9 @@ const AppContext = createContext(null);
 export function AppProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const stateRef = useRef(state);
-  stateRef.current = state;
+  useEffect(() => {
+    stateRef.current = state;
+  }, [state]);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((value) => {

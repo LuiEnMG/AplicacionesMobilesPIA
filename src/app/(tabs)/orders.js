@@ -1,8 +1,7 @@
 import { router } from 'expo-router';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Button, Card, Chip, Text } from 'react-native-paper';
-import { cityById } from '../../context/AppContext';
-import { formatDate, useApp } from '../../context/AppContext';
+import { cityById, formatDate, useApp } from '../../context/AppContext';
 
 const labels = { preparing: 'Preparando', in_transit: 'En tránsito', near_destination: 'Cerca del destino', delivered: 'Entregado' };
 

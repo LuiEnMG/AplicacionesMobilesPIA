@@ -1,5 +1,4 @@
-import { Tabs } from 'expo-router';
-import { router } from 'expo-router';
+import { router, Tabs } from 'expo-router';
 import { IconButton } from 'react-native-paper';
 import { Text } from 'react-native';
 

@@ -1,8 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 import { Button, Card, Text } from 'react-native-paper';
-import { cityById } from '../../context/AppContext';
-import { formatDate, useApp } from '../../context/AppContext';
+import { cityById, formatDate, useApp } from '../../context/AppContext';
 
 export default function MapScreen() {
   const { orders, selectedOrderId, simulatedNow, toggleSimulation, simulationRunning } = useApp();
